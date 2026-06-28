@@ -1,0 +1,582 @@
+body {
+    background: #edf2f7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    background: #0f3f70;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #56c0d8 !important;
+}
+
+.carousel {
+    margin-bottom: 60px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    filter: brightness(.55);
+}
+
+.carousel-caption {
+    bottom: 30%;
+}
+
+.carousel-caption h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 3px 10px rgba(0,0,0,.5);
+}
+
+.carousel-caption p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.btn-country {
+    background: #1f8aa6;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-weight: bold;
+    border: none;
+    margin-top: 15px;
+}
+
+.btn-country:hover {
+    background: #156d82;
+    color: white;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro-section h2 {
+    color: #0f3f70;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.intro-section p {
+    font-size: 18px;
+    color: #4b5563;
+}
+
+.home-feature-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.home-feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.home-feature-card h3 {
+    color: #0f3f70;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home-feature-card p {
+    color: #4b5563;
+}
+
+.home-feature-card a {
+    color: #1f8aa6;
+    font-weight: bold;
+}
+
+.home-feature-card a:hover {
+    color: #d4a017;
+}
+
+.countries-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: countryBackground 45s infinite ease-in-out;
+}
+
+.countries-overlay {
+    min-height: 100vh;
+    background: rgba(237,242,247,.62);
+    padding: 1px 0 20px;
+}
+
+@keyframes countryBackground {
+    0% {
+        background-image: url("images/dominicanrepublic.jpg");
+    }
+
+    20% {
+        background-image: url("images/france.jpg");
+    }
+
+    40% {
+        background-image: url("images/egypt.jpg");
+    }
+
+    60% {
+        background-image: url("images/fiji.jpg");
+    }
+
+    80% {
+        background-image: url("images/mountains.jpg");
+    }
+
+    100% {
+        background-image: url("images/dominicanrepublic.jpg");
+    }
+}
+
+.country-hero {
+    background-image: linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.42)), url("images/egypt.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.18);
+}
+
+.country-hero-overlay {
+    padding: 85px 40px;
+    text-align: center;
+}
+
+.country-hero h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 10px rgba(0,0,0,.6);
+}
+
+.country-hero p {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
+
+.search-box {
+    margin-bottom: 35px;
+}
+
+.search-box input {
+    border-radius: 40px;
+    padding: 14px 20px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.country-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.country-card:hover {
+    transform: translateY(-6px);
+}
+
+.country-flag {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.no-flag {
+    height: 170px;
+    background: #dcecf3;
+    color: #0f3f70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.card-title {
+    color: #0f3f70;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.no-results {
+    display: none;
+    background: white;
+    color: #0f3f70;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+}
+
+.footer {
+    background: #0f3f70;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media(max-width: 768px) {
+    .carousel-image {
+        height: 420px;
+    }
+
+    .carousel-caption {
+        bottom: 18%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .country-hero-overlay {
+        padding: 60px 25px;
+    }
+
+    .country-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+.details-background {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(237,242,247,.72), rgba(237,242,247,.72)), url("images/france.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.details-overlay {
+    min-height: 100vh;
+    padding: 1px 0 20px;
+}
+
+.details-card {
+    background: white;
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.10);
+}
+
+.detail-flag {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.15);
+}
+
+.detail-no-flag {
+    min-height: 260px;
+    background: #dcecf3;
+    color: #0f3f70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 18px;
+}
+
+.detail-label {
+    color: #1f8aa6;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.details-card h1 {
+    color: #0f3f70;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.official-name {
+    color: #4b5563;
+    font-size: 1.2rem;
+}
+
+.detail-info-card,
+.detail-list-card {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    height: 100%;
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+}
+
+.detail-info-card h3,
+.detail-list-card h3 {
+    color: #0f3f70;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.detail-info-card p,
+.detail-list-card p,
+.detail-list-card li {
+    color: #4b5563;
+    font-size: 1rem;
+}
+
+.detail-list-card ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+@media(max-width: 768px) {
+    .details-card h1 {
+        font-size: 2.2rem;
+    }
+
+    .details-card {
+        padding: 25px;
+    }
+}
+
+.regions-background {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(
+            rgba(237,242,247,.72),
+            rgba(237,242,247,.72)
+        ),
+        url("images/france.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.regions-overlay {
+    min-height: 100vh;
+    padding: 1px 0 20px;
+}
+
+.region-hero {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.45)
+        ),
+        url("images/mountains.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.region-hero-overlay {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.region-hero h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.region-hero p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.region-card {
+    height: 240px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: .3s;
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+}
+
+.region-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        rgba(0,0,0,.45);
+}
+
+.region-card h2 {
+    color: white;
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.africa {
+    background-image:
+        url("images/egypt.jpg");
+}
+
+.americas {
+    background-image:
+        url("images/dominicanrepublic.jpg");
+}
+
+.asia {
+    background-image:
+        url("images/hongkong.jpg");
+}
+
+.europe {
+    background-image:
+        url("images/france.jpg");
+}
+
+.oceania {
+    background-image:
+        url("images/fiji.jpg");
+}
+
+.about-background {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(237,242,247,.70), rgba(237,242,247,.70)), url("images/france.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about-overlay {
+    min-height: 100vh;
+    padding: 1px 0 20px;
+}
+
+.about-hero {
+    background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("images/fiji.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.18);
+}
+
+.about-hero-overlay {
+    padding: 85px 40px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 10px rgba(0,0,0,.6);
+}
+
+.about-hero p {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
+
+.about-card,
+.about-feature-card {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+}
+
+.about-card h2,
+.about-feature-card h3 {
+    color: #0f3f70;
+    font-weight: bold;
+}
+
+.about-card p,
+.about-feature-card p {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.about-feature-card {
+    height: 100%;
+    text-align: center;
+    transition: .3s;
+}
+
+.about-feature-card:hover {
+    transform: translateY(-5px);
+}
+
+@media(max-width: 768px) {
+    .about-hero-overlay {
+        padding: 60px 25px;
+    }
+
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+}
