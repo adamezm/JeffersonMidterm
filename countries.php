@@ -4,6 +4,7 @@ require_once '_header.php';
 require_once 'functions.php';
 
 $data = getApiData('?limit=100&pretty=1');
+$selectedRegion = $_GET['region'] ?? '';
 ?>
 
 <main class="countries-background">
@@ -12,7 +13,13 @@ $data = getApiData('?limit=100&pretty=1');
 
             <section class="country-hero">
                 <div class="country-hero-overlay">
-                    <h1>Explore Countries</h1>
+                    <h1>
+						<?php
+						echo !empty($selectedRegion)
+							? htmlspecialchars($selectedRegion) . ' Countries'
+							: 'Explore Countries';
+						?>
+					</h1>
 
                     <p>
                         Browse countries, capitals, regions, and flags from around the world.
@@ -41,6 +48,10 @@ $data = getApiData('?limit=100&pretty=1');
                         $code = $country['codes']['alpha_2'] ?? '';
                         $flag = $country['flag']['url_png'] ?? '';
                         $searchText = strtolower($name . ' ' . $region . ' ' . $capital);
+						
+						if (!empty($selectedRegion) && strcasecmp($region, $selectedRegion) !== 0) {
+							continue;
+						}
                         ?>
 
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-4 country-item"
